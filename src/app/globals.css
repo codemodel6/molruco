@@ -2,26 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Tailwind의 responsive font-size 사용 */
+html {
+  @apply text-base md:text-sm sm:text-xs;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* 기본적으로 Tailwind에서 a 태그의 스타일을 유틸리티 클래스로 지정 가능 */
+a {
+  @apply no-underline text-inherit;
+}
+
+ol,
+ul {
+  @apply list-none;
+}
+
+button {
+  @apply border-0 cursor-pointer;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply min-h-screen;
+  -ms-overflow-style: none;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* 스크롤바 숨김
+::-webkit-scrollbar {
+  display: none;
+} */
+
+textarea {
+  @apply border-none resize-none focus:outline-none;
 }
