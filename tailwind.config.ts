@@ -12,6 +12,10 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        shilla: ["Shilla_CultureB-Bold", "sans-serif"],
+        suback: ["RixXladywatermelonR", "sans-serif"],
+      },
     },
   },
   plugins: [],
