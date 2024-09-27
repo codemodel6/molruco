@@ -32,14 +32,17 @@ button {
 
 body {
   @apply min-h-screen;
-  -ms-overflow-style: none;
   font-family: "Pretendard-Regular", sans-serif;
+  height: 100%;
+  /* IE에서 스크롤 숨김 */
+  /* -ms-overflow-style: none;  */
 }
 
-/* 스크롤바 숨김
+/* 크롬 스크롤바 숨김
 ::-webkit-scrollbar {
   display: none;
-} */
+}
+*/
 
 textarea {
   @apply border-none resize-none focus:outline-none;
